@@ -19,6 +19,7 @@ router.get('/all', getAllUsers)
 
 
 router.post('/new', register)
+
 router.post('/login', login)
 
 

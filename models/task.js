@@ -15,7 +15,7 @@ const schema = new mongoose.Schema({
     },
     user:{
        type:mongoose.Schema.Types.ObjectId,
-       ref:"User",
+       ref:"User", // schema name
        required:true,
     },
     createdAt: {
@@ -24,5 +24,6 @@ const schema = new mongoose.Schema({
     }
 })
 
-export const Task = mongoose.model("Task", schema)
+export const Task = mongoose.model("Task", schema);
+
 
