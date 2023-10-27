@@ -1,6 +1,7 @@
 import express from 'express'
 import userRouter from './routes/user.js';
 import {config} from 'dotenv'
+import cookieParser from 'cookie-parser';
 
 export const app = express();
 
@@ -13,7 +14,10 @@ config({
 
 //Using Middleware for getting json input from thunderclient
 app.use(express.json())
-app.use('/users',userRouter) // userRouter
+app.use(cookieParser())
+
+
+app.use('/api/v1/users',userRouter) // userRouter
 
 
 
